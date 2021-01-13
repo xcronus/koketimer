@@ -1,0 +1,97 @@
+body {
+  background-color: #222
+}
+
+div {
+  box-sizing: border-box;
+}
+
+#timerContainer {
+  position: relative;
+  width: 80vmin;
+  height: 80vmin;
+  margin: auto;
+  margin-top: 10vh;
+  color: #8e8d8d;
+  border-radius: 50%;
+}
+
+#timerDisk {
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 20px hsl(0, 0%, 10%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: hsl(0, 0%, 16%);
+}
+
+#timerDiskHole {
+  display: inline-block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: 40%;
+  top: 40%;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.5);
+  border-style: solid;
+  border-color: rgb(40, 40, 40);
+  border-width: 5px;
+}
+
+#timerDisk > svg > path:nth-child(1) {
+ stroke: #2c333f;
+}
+
+#timerGroundEnd {
+  position: absolute;
+  width: 100px;
+  height: calc(40% + 5px);
+  top: 0px;
+  left: 50%;
+  background: #292929;
+  box-shadow: -15px 3px 20px 1px rgba(0,0,0,0.5);
+  clip: rect(-53px 6px 1000 -1000px);
+}
+
+#timerBarEnd {
+  position: absolute;
+  width: 8px;
+  height: 39%;
+  background: #292929;
+}
+
+#timerBarKnob {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  background-color: #b3b3b3;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.75), 0px 0px 8px 0px rgba(0,0,0,0.4) inset;
+}
+
+#timerTime {
+  display: inline-block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: 40%;
+  top: 40%;
+  padding-top: 8%;
+  text-align: center;
+  font-family: 'Helvetica';
+  font-size: 4.5vmin;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#timerDirection {
+  position: absolute;
+  width: 3%;
+  height: 3%;
+  left: calc(50% - 1.5%);
+  top: calc(40% - -3.5%);
+  background-image: url("count_down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
